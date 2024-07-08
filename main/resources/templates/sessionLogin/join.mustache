@@ -1,0 +1,22 @@
+{{>layouts/header}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입 페이지</title>
+</head>
+<body>
+
+<h1>회원가입 페이지</h1>
+<form action="/session-login/join" method="POST">
+    <input type="text" name="loginId" placeholder="loginId 입력해주세요"/> <br/>
+    <input type="password" name="password" placeholder="password 입력해주세요"/> <br/>
+    <input type="text" name="nickname" placeholder="nickname 입력해주세요"/> <br/>
+    <button>회원가입</button>
+</form>
+
+</body>
+</html>
+
+{{>layouts/footer}}
