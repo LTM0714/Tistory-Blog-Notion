@@ -1,0 +1,27 @@
+{{>layouts/header}}
+
+{{#member}}
+    <form class="container" action="/users/update" method="post">
+        <input name="id" type="hidden" value="{{id}}">
+        <div class="mb-3">
+            <label class="form-label">Role</label>
+            <input class="form-control" name="role" value="{{role}}">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">LoginId</label>
+            <input class="form-control" name="loginId" value="{{loginId}}">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nickname</label>
+            <input class="form-control" name="nickname" value="{{nickname}}">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input class="form-control" name="password" value="{{password}}">
+        </div>
+        <button type="submit" class="btn btn-primary"> 수정완료 </button>
+        <a href="/users/{{id}}">Back</a>
+    </form>
+{{/member}}
+
+{{>layouts/footer}}

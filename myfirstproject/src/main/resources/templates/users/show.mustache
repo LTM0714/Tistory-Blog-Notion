@@ -1,0 +1,28 @@
+{{>layouts/header}}
+
+{{#member}}
+    <form class="container">
+        <div class="mb-3">
+            <label class="form-label">Role</label>
+            <input type="text" class="form-control" name="role" value={{role}} readonly>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">LoginId</label>
+            <input type="text" class="form-control" name="loginId" value={{loginId}} readonly>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nickname</label>
+            <input type="text" class="form-control" name="nickname" value={{nickname}} readonly>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" value={{password}} readonly>
+        </div>
+
+        <a href="/users/{{member.id}}/edit" class="btn btn-primary"> 수정하기 </a>
+        <a href="/users/{{member.id}}/delete" id="btn-delete" class="btn btn-danger"> 삭제하기 </a>
+        <a href="/users"> 회원 목록 </a>
+    </form>
+{{/member}}
+
+{{>layouts/footer}}

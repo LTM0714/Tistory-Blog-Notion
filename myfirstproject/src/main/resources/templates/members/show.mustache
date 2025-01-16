@@ -1,0 +1,20 @@
+{{>layouts/header}}
+
+{{#member}}
+    <form class="container">
+        <div class="mb-3">
+            <label class="form-label">이메일</label>
+            <input type="email" class="form-control" name="email" value={{email}} readonly>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">비밀번호</label>
+            <input type="password" class="form-control" name="password" value={{password}} readonly>
+        </div>
+
+        <a href="/members/{{member.id}}/edit" class="btn btn-primary"> 수정하기 </a>
+        <a href="/members/{{member.id}}/delete"  id="btn-delete" class="btn btn-danger"> 삭제하기 </a>
+        <a href="/members"> 회원 목록 </a>
+    </form>
+{{/member}}
+
+{{>layouts/footer}}

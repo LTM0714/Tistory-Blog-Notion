@@ -1,0 +1,48 @@
+{{>layouts/header}}
+
+<!--content-->
+<h1>home</h1>
+
+<br>
+<h5>공지사항</h5>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#noticeList}}
+        <tr>
+            <th>{{id}}</th>
+            <td><a href="/notices/{{id}}">{{title}}</a></td>
+            <td>{{content}}</td>
+        </tr>
+    {{/noticeList}}
+    </tbody>
+</table>
+
+<br>
+<h5>게시글</h5>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#articleList}}
+        <tr>
+            <th>{{id}}</th>
+            <td><a href="/articles/{{id}}">{{title}}</a></td>
+            <td>{{content}}</td>
+        </tr>
+    {{/articleList}}
+    </tbody>
+</table>
+
+{{>layouts/footer}}
